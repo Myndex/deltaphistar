@@ -8,7 +8,7 @@ But In fact, 𝜟𝜱✴︎ is intended for applications where a "general" simpl
 Here, create Lstar from the piecewise sRGB->Y and L* per the standard CIE math, then:
 
 ```js
-    deltaPhiStar = Math.abs(bgLstar^1.618 - txLstar^1.618)^0.618;
+    deltaPhiStar = (Math.abs(bgLstar^1.618 - txLstar^1.618)^0.618) * 1.3333 - 0.3333 ;
 ```
 
 This mainly works for "Light Mode" but does not track dark mode quite as well as APCA.
