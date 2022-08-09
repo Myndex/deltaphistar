@@ -1,7 +1,9 @@
 # 𝜟𝜱✴︎ _(delta phi star)_
-𝜟𝜱✴︎ or Delta Phi Star is a variant method of determining perceptual lightness contrast, and a sibling of APCA and SACAM. It is a simplified method using easily invertible standardized maths, however it lacks some useful properties such as polarity sensitivity. In fact, 𝜟𝜱✴︎ is intended for applications where a "general" simplifed perceptual contrast is desired, where polarity sensitivity is not needed (or is ambiguous).
+𝜟𝜱✴︎ or Delta Phi Star is a method of determining perceptual lightness contrast developed by Andrew Somers (Myndex Research), and is a sibling of [APCA](https://github.com/Myndex/SAPC-APCA) and SACAM. It is a simplified method using easily invertible standardized maths, however it lacks some useful properties such as polarity sensitivity.
 
-We created 𝜟𝜱✴︎ on the path toward SACAM (and APCA).
+But In fact, 𝜟𝜱✴︎ is intended for applications where a "general" simplifed perceptual contrast is desired, where polarity sensitivity is not needed or is ambiguous.
+
+𝜟𝜱✴︎ was created on the path toward SACAM and APCA.
 
 Here, create Lstar from the piecewise sRGB->Y and L* per the standard CIE math, then:
 
