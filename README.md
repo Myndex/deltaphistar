@@ -13,5 +13,7 @@ Here, create Lstar from the piecewise sRGB->Y and L* per the standard CIE math (
 
 This mainly works for "Light Mode" but does not track dark mode quite as well as APCA.
 
-Also, while this is close to parity with light mode APCA at Lc +90, lower contrasts are over-reported, and it does not match in dark mode. Some of this can be addressed with scales and offsets, which will be in the source herein. As the difference has a power curve exponent of 1/𝜱 applied, the difference must be an absolute value. 
+Also, while this is close to parity with light mode APCA for Lc +46 thru +75. The very low and very high contrasts reported by 𝜟𝜱✴︎ higher than those reported by APCA. THis is probably helpful as 𝜟𝜱✴︎ is not polarity sensitive the way APCA is. 
+
+As the difference has a power curve exponent of 1/𝜱 applied, the difference must be an absolute value. 
 
