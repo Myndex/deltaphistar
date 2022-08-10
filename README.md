@@ -13,8 +13,8 @@ Here, create Lstar from the piecewise sRGB->Y and L* per the standard CIE math (
 
 This mainly works for "Light Mode" but does not track dark mode quite as well as APCA.
 
-Also, while this is close to parity with light mode APCA for Lc +46 thru +75. The very low and very high contrasts reported by 𝜟𝜱✴︎ higher than those reported by APCA. THis is probably helpful as 𝜟𝜱✴︎ is not polarity sensitive the way APCA is. 
+Also, while this is close to parity with light mode APCA for Lc +46 thru +75. The very low and very high contrasts reported by 𝜟𝜱✴︎ higher than those reported by APCA. This should be helpful as 𝜟𝜱✴︎ is not polarity sensitive the way APCA is.
 
-As the difference has a power curve exponent of 1/𝜱 applied, the difference must be an absolute value. 
+As the difference has a power curve exponent of 1/𝜱 applied, the difference must be an absolute value. 𝜟𝜱✴︎ returns a positive value always, and is symmetrical in regards to polarity (text and BG order do not affect results).
 
 ![delta phi star logo general purpose contrast algorithm](https://user-images.githubusercontent.com/42009457/183782606-309d650e-8c74-4701-92a3-431179ed287f.png)
