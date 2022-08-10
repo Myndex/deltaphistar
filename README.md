@@ -17,3 +17,4 @@ Also, while this is close to parity with light mode APCA for Lc +46 thru +75. Th
 
 As the difference has a power curve exponent of 1/𝜱 applied, the difference must be an absolute value. 
 
+![delta phi star logo general purpose contrast algorithm](https://user-images.githubusercontent.com/42009457/183782606-309d650e-8c74-4701-92a3-431179ed287f.png)
