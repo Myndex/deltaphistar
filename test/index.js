@@ -1,4 +1,4 @@
-// APCA Test Script for 0.1.7
+// Delta Phi Star Test Script for 0.0.1
 
 import test from 'ava';
 
@@ -8,8 +8,7 @@ console.log('BEGIN TESTS')
 
 test.todo("Testing Delta Phi Star calculations\n")
 
-let color = ['#000', '#9e9e9e', '#FFF', '#888','#000', '#aaa', '#234', '#def',
-             '#123', '#444', '#777', '#a4a4a4','#fff', '#000', '#595959'];
+let color = ['#000', '#9e9e9e', '#FFF', '#888','#000', '#aaa', '#234', '#def', '#123', '#444', '#777', '#a4a4a4','#fff', '#000', '#595959'];
     
 let colorLength = color.length - 1;
 

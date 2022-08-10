@@ -44,7 +44,7 @@
 
 
        ////  (add slash to line start for local test mode, remove before push)
-//*    ////  LOCAL TESTING SWITCH for using test.html
+/*    ////  LOCAL TESTING SWITCH for using test.html
     // import { colorParsley } from'../../colorparsley/src/colorparsley.js';
     import { seeStars } from'../../seestars/src/seestars.js';
 /*/   //// TOGGLE
