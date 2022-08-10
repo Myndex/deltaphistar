@@ -1,0 +1,118 @@
+<!DOCTYPE html><head>
+<base lang="en-US" title="CoLoR PaRsLeY TEST">
+<title>𝜟𝜱✴︎delta phi star TEST</title>
+</head>
+<body style="margin: 2em; font-family: sans-serif; font-size: 1.2em; background: #429; color:#eee;">
+<h1>𝜟𝜱✴︎delta phi star Script Test 0.0.1</h1>
+
+<h3>Usage:</h3>
+<div class="hScroll">
+<code>𝜟𝜱✴ = contrastDPS(color1, color2);
+</code><br>
+</div>
+
+<br>
+<div id="test"><b>Enable Javascript</b><!--TEST RESULTS ARE INSERTED HERE --></div>
+
+
+<h2>TESTING YOUR IMPLEMENTATION</h2>
+
+<p>If you've implemented the code and want a quick sanity check, Here are some keystone checks with no rounding. The first color is TEXT and the second color is BACKGROUND:
+
+<p>Test Values for 0.0.1 constants.
+
+<h3>TEXT vs BKGND •  EXPECTED RESULT for 0.0.1</h3>
+<pre><code>
+    #000 & #9e9e9e 	 ∆Φ✴: 52.042324818974436
+    #9e9e9e & #FFF 	 ∆Φ✴: 52.15817941439123
+    #FFF & #888 	 ∆Φ✴: 63.155229570915864
+    #888 & #000 	 ∆Φ✴: 40.15402173709839
+    #000 & #aaa 	 ∆Φ✴: 58.397040139078555
+    #aaa & #234 	 ∆Φ✴: 49.71988060967246
+    #234 & #def 	 ∆Φ✴: 84.77424837874361
+    #def & #123 	 ∆Φ✴: 88.70761679910729
+    #123 & #444 	 ∆Φ✴: 0.0
+    #444 & #777 	 ∆Φ✴: 11.029421871598664
+    #777 & #a4a4a4 	 ∆Φ✴: 12.543444585172274
+    #a4a4a4 & #fff 	 ∆Φ✴: 48.902933046054386
+    #fff & #000 	 ∆Φ✴: 101.35051965850337
+    #000 & #595959 	 ∆Φ✴: 13.468722550811329
+
+Some APCA Lc  values for comparison:
+
+    #888 vs #fff  APCA Lc 63.056469930209424
+                     ∆Φ✴: 63.155229570915864
+
+    #000 vs #aaa  APCA Lc 58.146262578561334
+                     ∆Φ✴: 58.397040139078555
+                     
+    #123 vs #def  APCA Lc 91.66830811481631
+                     ∆Φ✴: 88.70761679910729
+                     
+    #123 vs #444  APCA Lc  8.32326136957393
+                     ∆Φ✴:  0.0
+    </code></pre>
+</body>
+
+
+
+
+
+
+<script type="module">
+
+// NOTE: For local testing, the import toggle in deltaphistar.js and seestars.js may need to be switched
+import { contrastDPS } from './deltaphistar.js';
+
+
+let outputText = document.getElementById('test');
+
+    outputText.innerHTML = '<h3>BEGIN TEST COLORS</h3>';
+    outputText.innerHTML += '<p>This is a test with the standardized test values</p> ';
+
+
+let color = ['#000', '#9e9e9e', '#FFF', '#888','#000', '#aaa', '#234', '#def',
+             '#123', '#444', '#777', '#a4a4a4','#fff', '#000', '#595959'], color4rev = '#a4a4a4';
+
+let colorLength = color.length - 1;
+let parsedCols = '', colorStrings = '<br><br>sRGB Colors Used:';
+let contrast = [0,];
+
+//*  ////   TOGGLE SWITCH A
+
+  parsedCols = parsedCols + '<br><br>sRGB DPS results • check to match the expected result<br>';
+  
+  for (let eye = 0, eyePlus; eye < colorLength; eye++ ) {
+     eyePlus = eye + 1;
+
+     parsedCols = parsedCols + '<br>'+ color[eye] +' & '+ color[eyePlus] + ' \t ∆Φ✴: ' + contrastDPS(color[eye],color[eyePlus]);
+
+
+     colorStrings = colorStrings + '<br>Color '+ eye +' is ' + color[eye];
+  };
+
+colorStrings = colorStrings + '<br>Color '+ colorLength +' is ' + color[colorLength];
+  
+// */ //// END TOGGLE SWITCH A
+outputText.innerHTML +='<pre>BEGIN<br>' + parsedCols + '<br>' + colorStrings
+
+
+/*  ////   TOGGLE SWITCH B
+
+         + '<br><br>sRGB DPS results • check to match the expected result'
+         + '<br><br>Colors 1 & 2   sRGB Lc ' + contrast[1] 
+         + '<br>Colors 2 & 1   sRGB Lc ' + contrast[2] 
+         + '<br><br>Colors 3 & 4   sRGB Lc ' + contrast[3] 
+         + '<br>Colors 4 & 3   sRGB Lc ' + contrast[4] 
+         + '<br><br>Colors 5 & 6   sRGB Lc ' + contrast[5] 
+         + '<br>Colors 6 & 5   sRGB Lc ' + contrast[6] 
+         + '<br><br>Colors 7 & 8   sRGB Lc ' + contrast[7] 
+         + '<br>Colors 8 & 7   sRGB Lc ' + contrast[8] 
+         
+// */ //// END TOGGLE SWITCH B  
+
+                     + '<br><br>END</pre>';
+</script>
+
+
+
