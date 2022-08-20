@@ -52,15 +52,15 @@
     import { seeStars } from "seestars";
 // */ //// END LOCAL TESTING SWITCH
 
-
+const phi = Math.pow(5, 0.5) * 0.5 + 0.5; // Math.phi can be used if Math.js
 
 export function contrastDPS (foreground, background) {
     // send it a text and a bg color string, returns a value 0-100
 	let txLstar = seeStars(foreground);
 	let bgLstar = seeStars(background);
 
-  let contrast = Math.pow( Math.abs(Math.pow(bgLstar, 1.618) - 
-	               Math.pow(txLstar,1.618)), 0.618 ) * 1.414 - 40;
+  let contrast = Math.pow( Math.abs(Math.pow(bgLstar, phi) - 
+	               Math.pow(txLstar,phi)), (1 / phi) ) * Math.SQRT2 - 40;
 	               
 	return  (contrast < 7.5) ? 0.0 : contrast ;
 	        
