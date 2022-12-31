@@ -1,4 +1,81 @@
-                    GNU AFFERO GENERAL PUBLIC LICENSE
+# DPS CONTRAST (DELTA PHI STAR) LICENSE
+***DPS Contrast***, also known as ***Delta Phi Star***, is a simple formula for predicting human visual perception of contrast between text and background. 
+
+- **WHAT WHERE HOW**
+    - Delta Phi Star predicts the contrast of text against the background for a given pair of colors.
+    - Delta Phi Star emerged from the SAPC/APCA project developing new standards for better beat ability on the web. 
+    - Delta Phi Star takes in two $L^*$ (Lstar) values, and returns an $L^c$ (lightness contrast) value.
+
+- **UNIFORMITY:**
+    - DPS Contrast is quasi-uniform for human perception of text against a background on a self-illuminated display
+        - reasonably accurate within a defined range $L^c 45$ to $L^c 75$ and for positive polarity (dark text on a light background)
+    - The perception curve is based on the output of SACMX-based mixed-mode high-spatial-frequency contrast matching data, using
+        - hardware-calibrated standard-dynamic-range (SDR) sRGB displays
+        - a typical office-type lighting environment with a nominal ambient illumination of 350 lux.
+
+- **LIMITATIONS:**
+    - DPS Contrast becomes substantially less accurate at very high and very low contrasts
+        - $L^c$ values lower than $L^c 45$ or higher than $L^c 75$ are generally higher than actual perception
+        - as such $L^c$ values lower than $L^c 45$ or higher than $L^c 75$ should be derated
+    - DPS Contrast is not polarity aware
+        - and $L^c$ values for reverse polarity aka "dark mode" are generally lower
+        - in dark mode, actual contrast is higher than the reported $L^c$ values between $L^c 40$ & $L^c 70$
+        - to approximate the polarity difference, add **$5$** to the $L^c$ value for dark mode results between $L^c 40$ & $L^c 70$
+
+- **INITALISMS and ACRONYMS:**
+    - APCA™: Accessible Perceptual Contrast Algorithm™ *(aye pea see aye)*
+        - sometimes referred to as the Advanced Perceptual Contrast Algorithm
+        - is a perceptual uniform model of text on a self-illuminated display
+    - APCA-W3: APCA World Wide Web
+        - specific apca version intended for WCAG guidelines
+        - includes a version of APCA-RDG accessibility guidelines for visual readability
+    - APCA-RDG: APCA Readability Design Guidelines 
+        - an independent set of design guidelines to promote effective readability and accessibility for visually readable content
+    - DPS-C: Delta Phi Star™ Contrast *(dee pea ess)*
+        - simplified quasi-uniform perceptual contrast model
+    - SACAM™: SLuv Accessible Color Appearance Model™ *(say cam)*
+        - color appearance model that is designed specifically for self-illuminated displays
+        - features utilities to accommodate various visual impairments
+    - SAPC™: SLuv Accessible Perceptual Contrast™ *(sap see)*
+        - an earlier contrast appearance model that laid the foundation for APCA and SACAM
+    - SACMX: Spatially Aware Contrast Matching eXperiment
+        - a method of measuring the perceived suprathreshold contrast at high spatial frequencies
+ 
+ - **COPYRIGHT and TRADEMARKS:**
+     - this repo and all materials contained here in, are copyright © 2022 by Andrew Somers. All Rights Reserved. Use permitted as defined in this license agreement.
+     - Nothing in this license agreement extends to nor permits the use of any trademarks shown anywhere in this repo, unless specifically stated.
+         - The term "Delta Phi Star™" may be used to describe instantiations, integrations, applications, libraries, or frameworks which are using the materials in this repo, provided that such usage is unaltered except as may be needed to port to different languages.
+
+
+
+## MODIFIED AFFERO GENERAL PUBLIC LICENSE
+Software and source code in this repo is licensed per the AGPL version three, pursuant to the following modifications and provisions as provided for in AGPL Section 7, and as enumerated below.
+
+### *The followings provisions modify the terms of the AGPL, per section seven:*
+
+1. **Attribution**    
+    - the use of any source code, other intellectual property, or other materials presented in this repo requires, at a minimum, attribution to the code author and a repo owner, Andrew Somers.
+    - attribution to be placed with the attribution for other contributors. 
+    - within an attribution listing of only names without indication of what was contributed, the attribution shall be *"Andrew Somers"*
+    - within an attribution listing which includes reference to the contributing material, the attribution shall convey *"Delta Phi Star Contrast by Andrew Somers"* in a form consistent with other contributors.
+2. **As-Is, No Warranty Expressed Nor Implied**    
+    - the source code and other intellectual property in this repository is offered exclusively as-is, with no warranty whatsoever, neither expressed nor implied, including no obligation of providing support of any kind, including but not limited to technical, support, testing, evaluation, and integration.
+3. **Limitations on Use and Safety Evaluation**
+    - the owners of this repository accept no liability whatsoever for the use or misuse or inappropriate use of any of the materials herein.
+    - the user(s) of any of the materials in this repository applications involving any level of human safety including but not limited to medical, clinical, transportation, aerospace, motor vehicle, military, and law-enforcement, shall except full liability for the use of the materials herein.
+    - the user(s) of materials in this repository shall be solely responsible for any and all safety testing, evaluation, and certifications, as may be required or deemed necessary or prudent for their specific implementation or application.
+4. **Fitness of Purpose and Hold Harmless**
+    - no claim is made, nor is any assertion supported, regarding the fitness-of-purpose or fitness-of-use of any materials in this repository for any use or for any given application, integration, library, framework, or any other utilization of the materials in this repository.
+    - the fitness of purpose, and/or fitness-of-use, of any materals in ths repository shall be determined soley by the user(s) of the materials, who shall accept any and all liabilities from the use, integration, implementation, distribution, and application of any of the materials including any underlying theories and guidelines.
+    - users of any materials in this repository shall hold harmless the owners of this repository and the contributors to this repository of any and all liabilities stemming from any use misuse or inappropriate use of the materials here in.
+ 5. **Support Limitations**
+    - outside of any written contract for support, there is no guarantee or warranty providing for any specific level of support, support requests shall be handled on an available time and resources basis, at the sole discretion of the owners and contributors to this repository and related repositories.
+    - limited support is offered here in the issues and discussion sections, and at the other SAPC-APCA repos, on an as–available basis, and provided as is and without any form of client/vendor expectation.
+    - the contributors to this repository have sole discretion as too the level, volume, and degree of support offered at any given time.
+
+
+```text
+                   GNU AFFERO GENERAL PUBLIC LICENSE
                        Version 3, 19 November 2007
 
  Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
@@ -659,3 +736,5 @@ specific requirements.
 if any, to sign a "copyright disclaimer" for the program, if necessary.
 For more information on this, and how to apply and follow the GNU AGPL, see
 <https://www.gnu.org/licenses/>.
+
+```
