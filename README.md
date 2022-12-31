@@ -24,13 +24,13 @@
 
 
 # 𝜟𝜱✴︎ _(delta phi star) DPS Contrast_
-$𝜟𝜱✴︎$ or Delta Phi Star or DPS Contrast, is a method of determining perceptual lightness contrast developed by Andrew Somers (Myndex Research), and is a sibling of [APCA](https://github.com/Myndex/SAPC-APCA) and SACAM. It is a simplified method using easily invertible standardized maths, however it lacks some useful properties such as polarity sensitivity.
+$𝜟𝜱✴︎$ or Delta Phi Star or DPS Contrast, is a method of determining perceptual lightness contrast developed by Andrew Somers (Myndex Research), and is a sibling of [APCA](https://github.com/Myndex/SAPC-APCA) and SAPC/SACAM. It is a simplified method using easily invertible standardized maths, however it lacks some useful properties such as polarity sensitivity.
 
-But In fact, $𝜟𝜱✴︎$ is intended for applications where a "general" simplifed perceptual contrast is desired, where polarity sensitivity is not needed or is ambiguous.
+But In fact, $𝜟𝜱✴︎$ is intended for applications where a "general" simplifed perceptual contrast is desired, where polarity sensitivity is not needed or is more ambiguous. Nevertheless, polarity sensitivity can be emulated by adding $Lc\ 5$ to negative polarity situations.
 
 𝜟𝜱✴︎ DPS Contrast was created on the path toward SACAM and APCA.
 
-Here, create Lstar from the piecewise $sRGB$ &rarr; $Y$ and $L^*$ per the standard CIE math (see the [See Stars](https://github.com/Myndex/seestars) microlibrary), then:
+TUTORIAL, create Lstar from the piecewise $sRGB$ &rarr; $Y$ and $L^*$ per the standard CIE math (see the [See Stars](https://github.com/Myndex/seestars) microlibrary), then:
 
 ```js
     deltaPhiStar = (Math.abs(bgLstar ** 1.618 - txLstar ** 1.618) ** 0.618) * 1.414 - 40 ;
@@ -38,9 +38,9 @@ Here, create Lstar from the piecewise $sRGB$ &rarr; $Y$ and $L^*$ per the standa
     // ** is equiv to Math.pow
 ```
 
-This mainly works for "Light Mode" but does not track dark mode quite as well as APCA.
+This mainly works for "Light Mode" but does not track dark mode as well as APCA.
 
-Also, while this is close to parity with light mode APCA for $Lc\ +45$ thru $Lc\ +75$. The very low and very high contrasts reported by 𝜟𝜱✴︎ higher than those reported by APCA. This should be helpful as $𝜟𝜱✴︎$ is not polarity sensitive the way APCA is.
+Also, while this is close to parity with light mode APCA for $Lc\ +45$ thru $Lc\ +75$. The very low and very high contrasts reported by 𝜟𝜱✴︎ higher than those reported by APCA.
 
 As the difference has a power curve exponent of $1/𝜱$ applied, the difference must be an absolute value. $𝜟𝜱✴︎$ returns a positive value always, and is symmetrical in regards to polarity (text and BG order do not affect results). 
 
@@ -69,7 +69,7 @@ As the difference has a power curve exponent of $1/𝜱$ applied, the difference
             - 24px normal or 16px bold
         - $L^c\ 45$ permits a minimum font size:
             - 42px normal or 24px bold
-    - **_FOR SECONDARY CONTENT, SPOT READABLE TEXT_**
+    - **_FOR SECONDARY CONTENT, "SPOT" READABLE TEXT_**
         - subtract $L^c\ 15$ from the above values.
         - at $L^c\ 90$ (i.e. $L^c\ 75$ _after_ subtractng $L^c\ 15$)
             - minimum font size is 11px for secondary content only.
@@ -86,7 +86,8 @@ As the difference has a power curve exponent of $1/𝜱$ applied, the difference
         - reasonably accurate within a defined range $L^c 45$ to $L^c 75$ and for positive polarity (dark text on a light background)
     - The perception curve is based on the output of SACMX-based mixed-mode high-spatial-frequency contrast matching data, using
         - hardware-calibrated standard-dynamic-range (SDR) sRGB displays
-        - a typical office-type lighting environment with a nominal ambient illumination of 350 lux.
+        - a typical office lighting environment with a nominal ambient illumination of 350 lux.
+        - proximal screen set at or close to white.
 
 - **DEPENDENCIES:**
     - DPS Contrast itself is a *single line of code*, but it's inputs require that a color has been reduced to a $CIE\ L^*$ value.
