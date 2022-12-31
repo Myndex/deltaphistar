@@ -62,6 +62,8 @@ As the difference has a power curve exponent of $1/𝜱$ applied, the difference
         - Linear interpolation is permitted intra-level.
         - These values are based on reference fonts such as Helvetica or Arial.
         - To use a 300 weight font, add $L^c\ 10$ to the contrast threshold needed for normal weight.
+        - CSS `font-smoothing: antialiased` is prohibited for 300 weight fonts smaller than 36px and for 400 fonts which are smaller than 24px.
+            - `font-smoothing: auto` should be used for small and thin fonts.
     - **_FOR PRIMARY CONTENT TEXT_**
         - $L^c\ 75$ permits a minimum font size:
             - 16px normal or 12px bold
