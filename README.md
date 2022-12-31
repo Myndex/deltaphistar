@@ -30,7 +30,7 @@ But In fact, $𝜟𝜱✴︎$ is intended for applications where a "general" sim
 
 𝜟𝜱✴︎ DPS Contrast was created on the path toward SACAM and APCA.
 
-TUTORIAL, create Lstar from the piecewise $sRGB$ &rarr; $Y$ and $L^*$ per the standard CIE math (see the [See Stars](https://github.com/Myndex/seestars) microlibrary), then:
+**TUTORIAL:** create Lstar from the piecewise $sRGB$ &rarr; $Y$ and $L^*$ per the standard CIE math (see the [See Stars](https://github.com/Myndex/seestars) microlibrary), then:
 
 ```js
     deltaPhiStar = (Math.abs(bgLstar ** 1.618 - txLstar ** 1.618) ** 0.618) * 1.414 - 40 ;
@@ -44,9 +44,7 @@ Also, while this is close to parity with light mode APCA for $Lc\ +45$ thru $Lc\
 
 As the difference has a power curve exponent of $1/𝜱$ applied, the difference must be an absolute value. $𝜟𝜱✴︎$ returns a positive value always, and is symmetrical in regards to polarity (text and BG order do not affect results). 
 
-![delta phi star logo general purpose contrast algorithm](https://user-images.githubusercontent.com/42009457/183782606-309d650e-8c74-4701-92a3-431179ed287f.png)
-
-
+<img alt="delta phi star logo general purpose contrast algorithm" src="https://user-images.githubusercontent.com/42009457/183782606-309d650e-8c74-4701-92a3-431179ed287f.png" id="deltaphistar-contrast-logo">
 
 
 ## DELTA PHI STAR CONTRAST FAQ
