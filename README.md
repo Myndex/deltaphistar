@@ -49,11 +49,11 @@ As the difference has a power curve exponent of $1/𝜱$ applied, the difference
 
 
 
-## DPS CONTRAST 𝜟𝜱✴︎ FAQ
+## DELTA PHI STAR CONTRAST FAQ
 ***DPS Contrast***, also known as ***Delta Phi Star 𝜟𝜱✴︎***, is a simple formula for predicting human visual perception of contrast between text and background on computer monitors and devices. 
 
 - **WHO WHAT WHERE WHEN WHY HOW**
-    - Delta Phi Star was developed by Andrew Somers, in the pursuit of better readability guidelines.
+    - Delta Phi Star was developed by Andrew Somers, in the pursuit of better (and simpler) readability guidelines.
     - Delta Phi Star is a formula that predicts the contrast of text against the background for a given pair of colors.
     - Delta Phi Star emerged from the SAPC/APCA project developing new standards for better beat ability on the web.
     - To provide a simple, yet usefully accurate and perceptually uniform contrast metric.
@@ -62,6 +62,8 @@ As the difference has a power curve exponent of $1/𝜱$ applied, the difference
 - **BASIC READABILITY GUIDELINES:**
     - Delta Phi Star Readability Guidelines are set as simple thresholds similar to WCAG 2.x 
         - linear interpolation is permitted intra-level.
+        - These values are based on a reference fonts such as Helvetica or Arial
+        - to use a 300 weight font, add $L^c\ 10$ to the contrast needed for normal weight
     - **_FOR PRIMARY CONTENT TEXT_**
         - $L^c\ 75$ permits a minimum font size:
             - 16px normal or 12px bold
@@ -98,7 +100,7 @@ As the difference has a power curve exponent of $1/𝜱$ applied, the difference
     - DPS Contrast becomes substantially less accurate at very high and very low contrasts
         - $L^c$ values lower than $L^c 45$ or higher than $L^c 75$ are generally higher than actual perception
         - as such $L^c$ values lower than $L^c 45$ or higher than $L^c 75$ should be derated
-        - otherwise, the range between 45 to 75 is the area of thresholds most important for text.
+        - otherwise, the range between 45 to 75 is the area of the thresholds most important for text, Arguably this is the only thing that's really necessary for use in defined guidelines such as those needed for WCAG.
     - DPS Contrast is not polarity aware
         - and $L^c$ values for reverse polarity aka "dark mode" are generally lower
         - in dark mode, actual contrast is higher than the reported $L^c$ values between $L^c 40$ & $L^c 70$
@@ -108,8 +110,8 @@ As the difference has a power curve exponent of $1/𝜱$ applied, the difference
     - APCA™: Accessible Perceptual Contrast Algorithm™ *(aye pea see aye)*
         - sometimes referred to as the Advanced Perceptual Contrast Algorithm
         - is a perceptual uniform model of text on a self-illuminated display
-    - APCA-W3: APCA World Wide Web
-        - specific apca version intended for WCAG guidelines
+    - APCA-W3: APCA World Wide Web version
+        - specific APCA version intended for WCAG guidelines
         - includes a version of APCA-RDG accessibility guidelines for visual readability
     - APCA-RDG: APCA Readability Design Guidelines 
         - an independent set of design guidelines to promote effective readability and accessibility for visually readable content
