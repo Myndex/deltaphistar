@@ -59,9 +59,9 @@ As the difference has a power curve exponent of $1/𝜱$ applied, the difference
 
 - **BASIC READABILITY GUIDELINES:**
     - Delta Phi Star Readability Guidelines are set as simple thresholds similar to WCAG 2.x 
-        - linear interpolation is permitted intra-level.
-        - These values are based on a reference fonts such as Helvetica or Arial
-        - to use a 300 weight font, add $L^c\ 10$ to the contrast needed for normal weight
+        - Linear interpolation is permitted intra-level.
+        - These values are based on reference fonts such as Helvetica or Arial.
+        - To use a 300 weight font, add $L^c\ 10$ to the contrast threshold needed for normal weight.
     - **_FOR PRIMARY CONTENT TEXT_**
         - $L^c\ 75$ permits a minimum font size:
             - 16px normal or 12px bold
@@ -70,14 +70,14 @@ As the difference has a power curve exponent of $1/𝜱$ applied, the difference
         - $L^c\ 45$ permits a minimum font size:
             - 42px normal or 24px bold
     - **_FOR SECONDARY CONTENT, "SPOT" READABLE TEXT_**
-        - subtract $L^c\ 15$ from the above values.
+        - _subtract_ $L^c\ 15$ from the above values.
         - at $L^c\ 90$ (i.e. $L^c\ 75$ _after_ subtractng $L^c\ 15$)
             - minimum font size is 11px for secondary content only.
         - secondary content includes things like "copyright" or "placeholder text"
-    - **_FOR SEMANTC NON-TEXT (icons and pictograms)_**
+    - **_FOR SEMANTIC NON-TEXT (icons and pictograms)_**
         - $L^c\ 60$ for thin outline icons or thin line drawings
         - $L^c\ 45$ for solid icons or bolder line drawings
-    - **_FOR NON-SEMANTC NON-TEXT (chart elements or button shapes)_**
+    - **_FOR NON-SEMANTIC NON-TEXT (chart elements or button shapes)_**
         - $L^c\ 45$ for button outlines, thin chart lines, small pie pieces
         - $L^c\ 30$ for solid buttons, bar charts, large pie pieces
 
