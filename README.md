@@ -86,8 +86,28 @@ As the difference has a power curve exponent of $1/𝜱$ applied, the difference
     - $L^c\ 45$ for button outlines, thin chart lines, small pie pieces
     - $L^c\ 30$ for solid buttons, bar charts, large pie pieces
 
----
 
+- **VISUAL COMPARISON**
+While there isn't a tool up and running here, at [LeaVerou](https://github.com/LeaVerou)'s [color.js](https://github.com/LeaVerou/color.js) demo site, DeltaPhiStar's part of the demo for when to flip from black to white. In this demo you can compare a number of different contrast algorithms, including WCAG2, APCA, DeltaPhiStar, and others.
+
+[**_Black or White?_**](https://colorjs.io/apps/blackwhite/) at color.js
+
+Here's a screenshot of that demo comparing DeltaPhiStar to APCA, the boxes with a dashed border around them indicate where DeltaPhiStar is different than APCA, with DPS showing black text instead of white. 
+
+This is largely attributable to the the following:
+- The difference in how sRGB colors are processed between APCA & DeltaPhiStar
+    - DeltaPhiStar using the IEC _piecewise_ linearization and CIE conversion to $L^*$.
+    - APCA uses an optimized conversion that compensates for gamma gain.
+- APCA is polarity sensitive, DeltaPhiStar is not.
+    - as a result, near the flip point for black and white, DeltaPhiStar is slightly under reporting the actual contrast of negative polarity (White text).
+
+<sub>_click to enlarge_</sub>
+<img width="705" alt="Colors.js sample black and white flip test comparing APCA and delta phi star" src="https://user-images.githubusercontent.com/42009457/210149363-3b75406c-9738-4bc2-80d1-baa28c26d8e4.png">
+
+As you can see, DeltaPhiStar is not as accurate around the Extreme flip point, but otherwise in relatively decent agreement, and probably well suited for a simplified guideline.
+
+
+---
 - **UNIFORMITY:**
     - DPS Contrast is quasi-uniform for human perception of text against a background on a self-illuminated display
         - reasonably accurate within a defined range $L^c 45$ to $L^c 75$ and for positive polarity (dark text on a light background)
@@ -134,4 +154,6 @@ As the difference has a power curve exponent of $1/𝜱$ applied, the difference
      - this repo and all materials contained here in, are copyright © 2022 by Andrew Somers. All Rights Reserved. Use permitted as defined in this license agreement.
      - Nothing in the license agreement extends to nor permits the use of any trademarks shown anywhere in this repo, unless specifically stated.
          - The term "Delta Phi Star™" may be used to describe instantiations, integrations, applications, libraries, or frameworks which are using the materials in this repo, provided that such usage is unaltered except as may be needed to port to different languages.
+
+
 
