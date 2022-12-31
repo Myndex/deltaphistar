@@ -57,31 +57,36 @@ As the difference has a power curve exponent of $1/𝜱$ applied, the difference
     - To provide a simple, yet usefully accurate and perceptually uniform contrast metric.
     - Convert a color pair to D65 CIELAB, then send the $L^*$ (Lstar) values to DPS, and it returns an $L^c$ (lightness contrast) value.
 
+---
 - **BASIC READABILITY GUIDELINES:**
     - Delta Phi Star Readability Guidelines are set as simple thresholds similar to WCAG 2.x 
         - Linear interpolation is permitted intra-level.
         - These values are based on reference fonts such as Helvetica or Arial.
         - To use a 300 weight font, add $L^c\ 10$ to the contrast threshold needed for normal weight.
         - CSS `font-smoothing: antialiased` is prohibited for 300 weight fonts smaller than 36px and for 400 fonts which are smaller than 24px.
-            - `font-smoothing: auto` should be used for small and thin fonts.
-    - **_FOR PRIMARY CONTENT TEXT_**
-        - $L^c\ 75$ permits a minimum font size:
-            - 16px normal or 12px bold
-        - $L^c\ 60$ permits a minimum font size:
-            - 24px normal or 16px bold
-        - $L^c\ 45$ permits a minimum font size:
-            - 42px normal or 24px bold
-    - **_FOR SECONDARY CONTENT, "SPOT" READABLE TEXT_**
-        - _subtract_ $L^c\ 15$ from the above values.
-        - at $L^c\ 90$ (i.e. $L^c\ 75$ _after_ subtractng $L^c\ 15$)
-            - minimum font size is 11px for secondary content only.
-        - secondary content includes things like "copyright" or "placeholder text"
-    - **_FOR SEMANTIC NON-TEXT (icons and pictograms)_**
-        - $L^c\ 60$ for thin outline icons or thin line drawings
-        - $L^c\ 45$ for solid icons or bolder line drawings
-    - **_FOR NON-SEMANTIC NON-TEXT (chart elements or button shapes)_**
-        - $L^c\ 45$ for button outlines, thin chart lines, small pie pieces
-        - $L^c\ 30$ for solid buttons, bar charts, large pie pieces
+        - `font-smoothing: auto` should be used for small and thin fonts.
+
+- **_FOR PRIMARY CONTENT TEXT_**
+    - $L^c\ 75$ permits a minimum font size of:
+        - 16px normal or 12px bold
+    - $L^c\ 60$ permits a minimum font size of:
+        - 24px normal or 16px bold
+    - $L^c\ 45$ permits a minimum font size of:
+        - 42px normal or 24px bold
+- **_FOR SECONDARY CONTENT, "SPOT" READABLE TEXT_**
+    - _subtract_ $L^c\ 15$ from the above values.
+    - at $L^c\ 90$ (which calculates as $L^c\ 75$ _after_ subtracting $L^c\ 15$)
+        - minimum font size is 11px for secondary content only.
+    - secondary content includes things like "copyright" or "placeholder text" or other textual elements that are not directly related to the primary contact of the page or primary navigation.
+
+- **_FOR SEMANTIC NON-TEXT (icons and pictograms)_**
+    - $L^c\ 60$ for thin outline icons or thin line drawings
+    - $L^c\ 45$ for solid icons or bolder line drawings
+- **_FOR NON-SEMANTIC NON-TEXT (chart elements or button shapes)_**
+    - $L^c\ 45$ for button outlines, thin chart lines, small pie pieces
+    - $L^c\ 30$ for solid buttons, bar charts, large pie pieces
+
+---
 
 - **UNIFORMITY:**
     - DPS Contrast is quasi-uniform for human perception of text against a background on a self-illuminated display
