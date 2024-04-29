@@ -155,5 +155,8 @@ As you can see, DeltaPhiStar is not as accurate around the Extreme flip point, b
      - Nothing in the license agreement extends to nor permits the use of any trademarks shown anywhere in this repo, unless specifically stated.
          - The term "Delta Phi Star™" may be used to describe instantiations, integrations, applications, libraries, or frameworks which are using the materials in this repo, provided that such usage is unaltered except as may be needed to port to different languages.
 
-
+- **PHI BONUS**
+```math
+\begin{align} \phi = 5^{0.5} \times 0.5 + 0.5 \end{align}
+```
 
